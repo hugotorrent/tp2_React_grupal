@@ -1,0 +1,228 @@
+/* Bitácora — Terminal/Hacker TP1 */
+
+/* Timeline container */
+.bitacora-timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-bottom: 3rem;
+}
+
+/* Log entry — idéntico al .log-entry del TP1 */
+.log-entry {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--green);
+  border-radius: 0 var(--r) var(--r) 0;
+  padding: 1.2rem 1.5rem;
+  margin-bottom: 1.2rem;
+  transition: box-shadow var(--t), border-color var(--t);
+  position: relative;
+  animation: fadeInUp 0.4s ease both;
+}
+.log-entry:hover {
+  box-shadow: 0 0 16px var(--green-glow);
+  border-left-color: var(--green);
+  border-color: var(--green-dim);
+}
+
+/* Quitar los elementos visuales del árbol que no van en TP1 */
+.log-entry__line { display: none; }
+.log-entry__dot  { display: none; }
+.log-entry__card {
+  background: none;
+  border: none;
+  padding: 0;
+}
+.log-entry__card:hover { box-shadow: none; }
+
+.log-entry__header {
+  display: flex;
+  gap: 0.6rem;
+  align-items: flex-start;
+  margin-bottom: 0.6rem;
+}
+
+.log-entry__emoji { font-size: 1rem; flex-shrink: 0; margin-top: 2px; }
+
+.log-entry__meta {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-bottom: 0.15rem;
+  flex-wrap: wrap;
+}
+
+/* Tipo / label — igual que .log-entry__date del TP1 */
+.log-entry__type {
+  font-size: 0.68rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--green-dim);
+}
+.log-entry__type::before { content: '['; }
+.log-entry__type::after  { content: ']'; }
+
+.log-entry__date {
+  font-size: 0.68rem;
+  color: var(--text-dim);
+  letter-spacing: 1px;
+}
+.log-entry__date::before { content: '[ '; }
+.log-entry__date::after  { content: ' ]'; }
+
+/* Title — .log-entry__title TP1 */
+.log-entry__title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--green);
+  margin-bottom: 0.4rem;
+}
+.log-entry__title::before { content: '## '; color: var(--text-dim); }
+
+/* Body — .log-entry__body TP1 */
+.log-entry__body {
+  font-size: 0.8rem;
+  color: var(--text-dim);
+  line-height: 1.7;
+  margin-bottom: 0.65rem;
+}
+.log-entry__body::before { content: '/* '; color: #2a5a2a; }
+.log-entry__body::after  { content: ' */'; color: #2a5a2a; }
+
+.log-entry__tags { display: flex; gap: 0.35rem; flex-wrap: wrap; }
+
+/* Migration section */
+.bitacora-migration { margin-bottom: 3rem; }
+
+.bitacora-migration-desc {
+  font-size: 0.8rem;
+  color: var(--text-dim);
+  margin-bottom: 1.5rem;
+  max-width: 700px;
+}
+.bitacora-migration-desc::before { content: '// '; color: var(--text-dim); }
+
+/* Migration table */
+.migration-table {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  overflow: hidden;
+}
+
+.migration-table__header {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 1rem;
+  align-items: center;
+  padding: 0.75rem 1.25rem;
+  background: var(--green-dark);
+  border-bottom: 1px solid var(--green-dim);
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.migration-table__header span:first-child { color: var(--red); }
+.migration-table__header span:last-child  { color: var(--green); }
+.migration-table__arrow { color: var(--text-dim); text-align: center; }
+
+.migration-row {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr 1fr;
+  border-bottom: 1px solid var(--border);
+  min-height: 72px;
+}
+.migration-row:last-child { border-bottom: none; }
+
+.migration-row__from,
+.migration-row__reason,
+.migration-row__to {
+  padding: 0.9rem 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  font-size: 0.78rem;
+}
+
+.migration-row__from {
+  border-right: 1px solid var(--border);
+  color: var(--text-dim);
+}
+.migration-row__reason {
+  border-right: 1px solid var(--border);
+  color: var(--text-dim);
+  font-style: italic;
+}
+.migration-row__to { color: var(--text); }
+
+.migration-row__label {
+  font-size: 0.58rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.migration-row__label.from { color: var(--red); }
+.migration-row__label.to   { color: var(--green); }
+.migration-row__why { color: var(--green-dim); font-weight: 700; font-style: normal; }
+
+/* Roles */
+.roles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+}
+
+/* Rol card — .card + terminal TP1 */
+.roles-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  position: relative;
+  transition: all var(--t);
+}
+.roles-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 2px;
+  background: linear-gradient(90deg, transparent, var(--green-dim), transparent);
+  opacity: 0;
+  transition: opacity var(--t);
+}
+.roles-card:hover {
+  border-color: var(--green-dim);
+  box-shadow: 0 0 16px var(--green-glow);
+}
+.roles-card:hover::before { opacity: 1; }
+
+.roles-card__icon { font-size: 1.25rem; }
+
+.roles-card h3 {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--green);
+}
+.roles-card h3::before { content: '> '; color: var(--text-dim); }
+
+.roles-card p {
+  font-size: 0.78rem;
+  color: var(--text-dim);
+  line-height: 1.6;
+  flex: 1;
+}
+
+.roles-card__tags { display: flex; gap: 0.35rem; flex-wrap: wrap; margin-top: 0.4rem; }
+
+/* Responsive */
+@media (max-width: 700px) {
+  .migration-row { grid-template-columns: 1fr; }
+  .migration-row__from,
+  .migration-row__reason { border-right: none; border-bottom: 1px solid var(--border); }
+}

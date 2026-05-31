@@ -1,0 +1,169 @@
+/* Home — Terminal/Hacker TP1 */
+
+/* Hero-like header */
+.home-header {
+  text-align: center;
+  padding: 3rem 1rem 2rem;
+  position: relative;
+  overflow: hidden;
+  animation: flicker 8s infinite;
+}
+
+/* Moving scanline — igual que hero TP1 */
+.home-header::after {
+  content: '';
+  position: absolute;
+  left: 0; right: 0;
+  height: 80px;
+  background: linear-gradient(transparent, rgba(0,255,65,0.03), transparent);
+  animation: scanline 6s linear infinite;
+  pointer-events: none;
+}
+
+.home-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.68rem;
+  letter-spacing: 3px;
+  color: var(--text-dim);
+  margin-bottom: 1rem;
+}
+.home-badge::before { content: '[ '; color: var(--green); }
+.home-badge::after  { content: ' ]'; color: var(--green); }
+
+.home-title {
+  font-size: clamp(2rem, 7vw, 4.5rem);
+  font-weight: 700;
+  color: var(--green);
+  text-shadow:
+    0 0 10px var(--green),
+    0 0 40px rgba(0,255,65,0.4),
+    0 0 80px rgba(0,255,65,0.2);
+  line-height: 1.1;
+  margin-bottom: 1.25rem;
+  letter-spacing: 3px;
+  background: none;
+  -webkit-text-fill-color: unset;
+}
+.home-title::after {
+  content: '_';
+  animation: blink 1s step-end infinite;
+  color: var(--green);
+}
+
+.home-subtitle {
+  font-size: clamp(0.78rem, 2vw, 0.9rem);
+  color: var(--text-dim);
+  line-height: 1.8;
+  margin-bottom: 0;
+}
+.home-subtitle::before { content: '// '; color: var(--text-dim); }
+
+/* Stats */
+.home-stats {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  max-width: 600px;
+  margin-inline: auto;
+  margin-top: 2rem;
+}
+
+.home-stat { display: flex; flex-direction: column; align-items: center; gap: 0.2rem; }
+
+.home-stat__value {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--green);
+  text-shadow: 0 0 8px var(--green-glow);
+}
+
+.home-stat__label {
+  font-size: 0.62rem;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Hint */
+.home-grid-hint {
+  font-size: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Team grid */
+.home-team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+/* About */
+.home-about { margin-top: 2rem; }
+
+.home-about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+}
+
+.home-about-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  padding: 1.5rem;
+  position: relative;
+  transition: all var(--t);
+}
+.home-about-card:hover {
+  border-color: var(--green-dim);
+  box-shadow: 0 0 16px var(--green-glow);
+}
+
+.home-about-icon {
+  font-size: 1.25rem;
+  line-height: 1;
+  filter: grayscale(0.5);
+}
+
+.home-about-card h3 {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--green);
+}
+.home-about-card h3::before { content: '## '; color: var(--text-dim); }
+
+.home-about-card p {
+  font-size: 0.78rem;
+  color: var(--text-dim);
+  line-height: 1.65;
+}
+
+/* Divider */
+hr.divider {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 2rem 0;
+}
+
+@media (max-width: 400px) {
+  .home-team-grid { grid-template-columns: 1fr; }
+  .home-stats { gap: 1.25rem; padding: 0.75rem 1rem; }
+}
+@media (min-width: 401px) and (max-width: 900px) {
+  .home-team-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 1200px) {
+  .home-team-grid { grid-template-columns: repeat(3, 1fr); }
+}

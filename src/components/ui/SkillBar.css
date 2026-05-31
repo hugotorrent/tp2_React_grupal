@@ -1,0 +1,59 @@
+/* SkillBar — Terminal/Hacker TP1 */
+.skill-bar { margin-bottom: 1rem; }
+
+.skill-bar__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.35rem;
+}
+
+.skill-bar__name {
+  font-size: 0.78rem;
+  color: var(--text);
+}
+.skill-bar__name::before { content: '> '; color: var(--green); }
+
+.skill-bar__level {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--green);
+}
+
+.skill-bar__track {
+  height: 4px;
+  background: var(--bg-card2);
+  border-radius: 2px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.skill-bar__fill {
+  height: 100%;
+  border-radius: 2px;
+  background: var(--green-dim);
+  box-shadow: 0 0 6px var(--green-glow);
+  transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Todas las variantes usan verde — coherente con TP1 */
+.skill-bar__fill[data-color="violet"] {
+  background: var(--green-dim);
+  box-shadow: 0 0 6px var(--green-glow);
+}
+.skill-bar__fill[data-color="cyan"] {
+  background: var(--green-dim);
+  box-shadow: 0 0 6px var(--green-glow);
+}
+
+/* Shimmer */
+.skill-bar__fill::after {
+  content: '';
+  position: absolute;
+  top: 0; left: -100%;
+  width: 60%; height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(0,255,65,0.3), transparent);
+  animation: shimmer 2s ease-in-out infinite;
+}

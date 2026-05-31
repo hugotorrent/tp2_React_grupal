@@ -1,0 +1,137 @@
+/* MemberCard — Terminal/Hacker estética TP1 */
+.member-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  padding: 2rem 1.5rem;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: all var(--t);
+  animation: fadeInUp 0.5s ease both;
+}
+
+/* Top green accent bar — igual que member-card TP1 */
+.member-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: var(--green-dim);
+  box-shadow: 0 0 10px var(--green);
+}
+
+.member-card:hover {
+  border-color: var(--green);
+  box-shadow: 0 0 24px var(--green-glow);
+  transform: translateY(-4px);
+}
+
+/* Accent line (override dinámico — no lo usamos en TP1 pero lo dejamos inerte) */
+.member-card__accent-line { display: none; }
+
+/* Avatar — cuadrado con bordes, igual que TP1 */
+.member-card__avatar-wrap {
+  position: relative;
+  width: 80px; height: 80px;
+  margin-bottom: 1.1rem;
+}
+
+.member-card__avatar-initials {
+  width: 80px; height: 80px;
+  border-radius: var(--r);
+  background: var(--green-dark);
+  border: 2px solid var(--green-dim);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--green);
+  text-shadow: 0 0 10px var(--green);
+  animation: glow-pulse 3s ease-in-out infinite;
+}
+
+.member-card__avatar-img {
+  width: 80px; height: 80px;
+  border-radius: var(--r);
+  object-fit: cover;
+  border: 2px solid var(--green-dim);
+}
+
+/* Ocultar el anillo giratorio — TP1 no lo tiene */
+.member-card__avatar-ring { display: none; }
+
+/* Info */
+.member-card__handle {
+  font-size: 0.68rem;
+  color: var(--text-dim);
+  margin-bottom: 0.35rem;
+  letter-spacing: 1px;
+}
+.member-card__handle::before { content: '@'; color: var(--green); }
+
+.member-card__name {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--green);
+  margin-bottom: 0.3rem;
+}
+.member-card__name::before { content: '> '; color: var(--text-dim); }
+
+.member-card__role {
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  margin-bottom: 0.6rem;
+  line-height: 1.4;
+}
+
+.member-card__meta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  font-size: 0.7rem;
+  color: var(--text-dim);
+  margin-bottom: 0.75rem;
+}
+.member-card__meta::before { content: '→ '; color: var(--green); }
+
+.member-card__badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+/* CTA — link estilo TP1 */
+.member-card__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.75rem;
+  padding: 4px 14px;
+  border-radius: var(--r);
+  border: 1px solid var(--green-dim);
+  color: var(--green);
+  background: var(--green-dark);
+  font-weight: 700;
+  transition: all var(--t);
+  letter-spacing: 1px;
+  width: 100%;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+.member-card__cta::before { content: '$ '; color: var(--text-dim); }
+.member-card:hover .member-card__cta {
+  background: var(--green);
+  color: #000;
+  box-shadow: 0 0 14px rgba(0,255,65,0.5);
+}
+
+.member-card__info { flex: 1; width: 100%; }
