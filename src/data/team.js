@@ -8,8 +8,9 @@ import avatarLuciano from '../assets/img/luciano_pixel.png';
 import viviendaImg from '../assets/img/hugo_img/vivienda.jpg';
 import sepriceImg from '../assets/img/hugo_img/seprice.png';
 import santoDomingoImg from '../assets/img/hugo_img/santo_domingo.jpg';
-
-
+import terraSostenibleImg from '../assets/img/luciano_img/terrasostenible.png';
+import cataNewsImg from '../assets/img/luciano_img/catanews.png';
+import stockImg from '../assets/img/luciano_img/stock.png'
 
 export const team = [
   {
@@ -109,42 +110,42 @@ export const team = [
     name: "Luciano Reguera",
     handle: "luciano_reguera",
     initials: "LR",
-    role: "Developer · Backend", // TODO: completar rol real
-    location: "San Juan, AR", // TODO: verificar
-    birthDate: "2000-01-01", // TODO: cambiar fecha real
-    bio: "Enfoque en desarrollo y resolución de problemas técnicos. Le gusta la lógica y los desafíos algorítmicos.",
+    role: "Developer · Backend",
+    location: "Tattoine, Territorios del Borde Exterior",
+    birthDate: "1465-01-01",
+    bio: "Backend Developer & Software Architect. Especializado en algoritmos, soluciones estructuradas y especificaciones técnicas. Cruzando el hiperespacio hacia el desarrollo Frontend para convertirme en un Jedi de stack completo.",
     avatar: avatarLuciano,
     skills: [
-      { name: "JavaScript", level: 70 },
-      { name: "HTML & CSS", level: 65 },
-      { name: "React", level: 55 },
-      { name: "Git & GitHub", level: 65 },
+      { name: "JavaScript", level: 90 },
+      { name: "Java", level: 80 },
+      { name: "PHP", level: 90 },
       { name: "Python", level: 60 },
-      { name: "Algoritmos", level: 72 },
+      { name: "Git & GitHub", level: 65 },
+      { name: "Algoritmos", level: 75 },
     ],
     projects: [
       {
-        title: "Proyecto 1", // TODO
-        description: "Descripción del proyecto 1 de Luciano.", // TODO
-        tech: ["JavaScript", "HTML", "CSS"],
-
+        title: "Terra Sostenible",
+        description: "Desarrollo landing page",
+        tech: ["JavaScript", "HTML", "CSS", "Astro"],
+        image: terraSostenibleImg,
       },
       {
-        title: "Proyecto 2", // TODO
-        description: "Descripción del proyecto 2 de Luciano.", // TODO
-        tech: ["Python", "Algoritmos"],
-
+        title: "Catanews",
+        description: "Diario de noticias de la ciudad de Catamarca.",
+        tech: ["Laravel", "Tailwind CSS", "Alpine JS"],
+        image: cataNewsImg,
       },
       {
-        title: "Proyecto 3", // TODO
-        description: "Descripción del proyecto 3 de Luciano.", // TODO
-        tech: ["React", "CSS"],
-
+        title: "Sistema stock",
+        description: "Desarrollo sistema de stock.",
+        tech: ["NestJS", "Postgres", "React", "CSS", "TanStack"],
+        image: stockImg
       },
     ],
     techStack: ["HTML5", "CSS3", "JavaScript", "React", "Git", "Python", "VS Code"],
     social: {
-      github: "https://github.com/luciano-reguera", // TODO: link real
+      github: "https://github.com/lucianoreguera",
       linkedin: null,
       instagram: null,
     },
