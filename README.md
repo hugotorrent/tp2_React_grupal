@@ -1,7 +1,7 @@
 # TP2 — Grupo 18 | Migración a React
 
-> 🔗 **Deploy en Vercel:** *(--)*
-> 📂 **Repositorio:** *(---)*
+> 🔗 **Deploy en Vercel:** *([Vercel](https://tp2-react-grupal.vercel.app/))*
+> 📂 **Repositorio:** *([GitHub](https://github.com/hugotorrent/tp2_React_grupal.git))*
 
 ---
 
@@ -17,11 +17,11 @@ El proyecto mantiene la identidad visual "terminal" del TP1 y la amplía con un 
 
 | Nombre completo        | GitHub                                      | Perfil en la app |
 |------------------------|---------------------------------------------|------------------|
-| Hugo Alberto Torrent   | [@hugo-torrent](https://github.com/)        | `/integrante/hugo` |
+| Hugo Alberto Torrent   | [@hugotorrent](https://github.com/hugotorrent)        | `/integrante/hugo` |
 | Diego González         | [@diego-gonzalez](https://github.com/)      | `/integrante/diego` |
 | Luciano Reguera        | [@luciano-reguera](https://github.com/)     | `/integrante/luciano` |
 
-> ⚠️ Actualizar links reales de GitHub antes del deploy.
+> 
 
 ---
 
@@ -185,13 +185,17 @@ Consume `rickandmortyapi.com/api/character` con estados loading/error, paginaci�
 *(captura)*
 
 ### Perfil Individual
-*(captura)*
-
+![alt text](/src/assets/img/capturas/individualHugo.png)
 ### Explorador de Datos
-*(captura)*
+![alt text](/src/assets/img/capturas/explorador.png)
 
 ### Módulo de API
-*(captura)*
+![alt text](/src/assets/img/capturas/moduloAPI.png)
+
+### Mobile
+![alt text](/src/assets/img/capturas/mobile1.png)
+![alt text](/src/assets/img/capturas/mobile2.png)
+![alt text](/src/assets/img/capturas/mobile3.png)
 
 ---
 
@@ -235,8 +239,7 @@ npm install
 npm run dev
 # → http://localhost:5173/
 
-# 4. Build para producción
-npm run build
+
 ```
 
 ---
