@@ -8,6 +8,13 @@ import avatarLuciano from '../assets/img/luciano_pixel.png';
 import viviendaImg from '../assets/img/hugo_img/vivienda.jpg';
 import sepriceImg from '../assets/img/hugo_img/seprice.png';
 import santoDomingoImg from '../assets/img/hugo_img/santo_domingo.jpg';
+
+// Imágenes proyectos de Diego
+import proyecto1 from '../assets/img/diego_img/proyecto1.jpg';
+import proyecto2 from '../assets/img/diego_img/proyecto2.jpg';
+import proyecto3 from '../assets/img/diego_img/proyecto3.png';
+
+// Imágenes proyectos de Luciano
 import terraSostenibleImg from '../assets/img/luciano_img/terrasostenible.png';
 import cataNewsImg from '../assets/img/luciano_img/catanews.png';
 import stockImg from '../assets/img/luciano_img/stock.png'
@@ -64,44 +71,47 @@ export const team = [
     name: "Diego González",
     handle: "diego_gonzalez",
     initials: "DG",
-    role: "Developer · Diseño", // TODO: completar rol real
-    location: "San Juan, AR", // TODO: verificar
-    birthDate: "2000-01-01", // TODO: cambiar fecha real
-    bio: "Interés en el desarrollo web y el diseño de interfaces. Apasionado por las nuevas tecnologías.",
+    role: "Developer · Diseño · Data Science · Nutrición · Mindfullness",
+    location: "Planeta Mercurio, Via Lactea",
+    birthDate: "1743-05-29",
+    bio: "Interés en el desarrollo web y el diseño de interfaces. Apasionado por las nuevas tecnologías. Uniendo lo mejor de mundos diversos como la nutrición y la ciencia de datos para crear soluciones innovadoras y centradas en el usuario.",
     avatar: avatarDiego,
     skills: [
       { name: "HTML & CSS", level: 75 },
-      { name: "JavaScript", level: 65 },
-      { name: "React", level: 55 },
-      { name: "Git & GitHub", level: 60 },
-      { name: "Diseño UI", level: 70 },
-      { name: "Figma", level: 50 },
+      { name: "JavaScript", level: 75 },
+      { name: "React", level: 65 },
+      { name: "Git & GitHub", level: 50 },
+      { name: "Diseño UI", level: 60 },
+      { name: "Figma", level: 70 },
     ],
     projects: [
       {
-        title: "Proyecto 1", // TODO: completar
-        description: "Descripción del proyecto 1 de Diego.", // TODO
+        title: "Proyecto 1",
+        description: "Curriculum Vitae Fluido con un enfoque dinamico, moderno y responsivo.",
+        tech: ["HTML", "CSS", "JavaScript", "NodeJS"],
+        image: proyecto1,
+
+      },
+      {
+        title: "Proyecto 2",
+        description: "Calculadora simple e intuitiva.",
         tech: ["HTML", "CSS", "JavaScript"],
+        image: proyecto2,
 
       },
       {
-        title: "Proyecto 2", // TODO
-        description: "Descripción del proyecto 2 de Diego.", // TODO
-        tech: ["React", "CSS"],
-
-      },
-      {
-        title: "Proyecto 3", // TODO
-        description: "Descripción del proyecto 3 de Diego.", // TODO
-        tech: ["Figma", "HTML"],
+        title: "Proyecto 3",
+        description: "Diseño de interfaz para una aplicación de gestión de tareas en Figma.",
+        tech: ["Figma"],
+        image: proyecto3,
 
       },
     ],
     techStack: ["HTML5", "CSS3", "JavaScript", "React", "Git", "Figma", "VS Code"],
     social: {
-      github: "https://github.com/diego-gonzalez", // TODO: link real
-      linkedin: null,
-      instagram: null,
+      github: "https://github.com/diegoale528",
+      linkedin: "https://es.linkedin.com",
+      instagram: "https://www.instagram.com",
     },
     badges: ["Dev", "Diseño", "UI"],
   },
