@@ -18,8 +18,8 @@ El proyecto mantiene la identidad visual "terminal" del TP1 y la amplía con un 
 | Nombre completo        | GitHub                                      | Perfil en la app |
 |------------------------|---------------------------------------------|------------------|
 | Hugo Alberto Torrent   | [@hugotorrent](https://github.com/hugotorrent)        | `/integrante/hugo` |
-| Diego González         | [@diego-gonzalez](https://github.com/)      | `/integrante/diego` |
-| Luciano Reguera        | [@luciano-reguera](https://github.com/)     | `/integrante/luciano` |
+| Diego González         | [@diego-gonzalez](https://github.com/diegoale528)      | `/integrante/diego` |
+| Luciano Reguera        | [@luciano-reguera](https://github.com/lucianoreguera)     | `/integrante/luciano` |
 
 > 
 
@@ -182,10 +182,13 @@ Consume `rickandmortyapi.com/api/character` con estados loading/error, paginaci�
 ## 🖼️ Capturas de Pantalla
 
 ### Dashboard — Home
-*(captura)*
+![alt text](/src/assets/img/capturas/dashboard.png)
 
 ### Perfil Individual
 ![alt text](/src/assets/img/capturas/individualHugo.png)
+![alt text](/src/assets/img/capturas/individualDiego.png)
+![alt text](/src/assets/img/capturas/individualLuciano.png)
+
 ### Explorador de Datos
 ![alt text](/src/assets/img/capturas/explorador.png)
 
